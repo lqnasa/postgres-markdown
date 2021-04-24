@@ -188,7 +188,7 @@ private void writeMarkdownFile(String fileName, String str) {
 
 执行生成markdown文档
 
-![image-20210424155432089](C:\Users\coderLee23\AppData\Roaming\Typora\typora-user-images\image-20210424155432089.png)
+![image-20210424155432089](https://github.com/lqnasa/postgres-markdown/docs/images/image-20210424155432089.png)
 
 # 五、总结
 
