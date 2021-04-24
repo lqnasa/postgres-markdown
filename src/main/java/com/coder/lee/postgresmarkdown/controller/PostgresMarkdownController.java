@@ -16,6 +16,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -61,11 +62,11 @@ public class PostgresMarkdownController {
             @ApiImplicitParam(name = "userName", value = "用户名", defaultValue = "root", required = true),
             @ApiImplicitParam(name = "password", value = "密码", defaultValue = "root", required = true)
     })
-    public String generatorDatabaseDoc(@RequestParam(defaultValue = "localhost") String ip,
-                                       @RequestParam(defaultValue = "5432") String port,
-                                       @RequestParam(defaultValue = "postgres") String databaseName,
-                                       @RequestParam(defaultValue = "root") String userName,
-                                       @RequestParam(defaultValue = "root") String password) {
+    public String generatorDatabaseDoc(@RequestParam(defaultValue = "localhost") @Validated String ip,
+                                       @RequestParam(defaultValue = "5432") @Validated String port,
+                                       @RequestParam(defaultValue = "postgres") @Validated String databaseName,
+                                       @RequestParam(defaultValue = "root") @Validated String userName,
+                                       @RequestParam(defaultValue = "root") @Validated String password) {
         // 1、动态创建jdbcTemplate
         JdbcTemplate jdbcTemplate = getJdbcTemplate(ip, port, databaseName, userName, password);
         // 2、获取该用户拥有的所有数据库
