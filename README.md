@@ -44,7 +44,7 @@ JDK 1.8.131
 
 将DataSourceAutoConfiguration的在启动时候exclude掉，避免初始化因未配置数据库信息，导致错误。
 
-```
+```java
 @EnableOpenApi
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class PostgresMarkdownApplication {
