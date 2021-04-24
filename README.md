@@ -184,7 +184,7 @@ private void writeMarkdownFile(String fileName, String str) {
 
 输入数据库访问信息
 
-![image-20210424155455267](C:\Users\coderLee23\AppData\Roaming\Typora\typora-user-images\image-20210424155455267.png)
+![image-20210424155455267](https://github.com/lqnasa/postgres-markdown/docs/images/image-20210424155455267.png)
 
 执行生成markdown文档
 
