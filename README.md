@@ -193,7 +193,7 @@ private void writeMarkdownFile(String fileName, String str) {
 # 五、总结
 
 Java实现导出Postgresql表结构生成MarkDown文档还是比较简单的。难度在于springboot切换数据库上比较麻烦。
-
+源码访问：https://github.com/lqnasa/postgres-markdown
 使用不足：
 
 ​       go编译成exe是最轻量，简单，原生命令支持。（`go build xxx`）
