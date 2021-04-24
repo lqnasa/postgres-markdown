@@ -9,6 +9,7 @@ import com.coder.lee.postgresmarkdown.service.PostgresDataBaseService;
 import com.coder.lee.postgresmarkdown.service.PostgresTableInfoService;
 import com.coder.lee.postgresmarkdown.service.PostgresTableService;
 import com.zaxxer.hikari.HikariDataSource;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
@@ -37,7 +38,7 @@ import java.util.List;
  * @author coderLee23
  */
 
-@ApiOperation("postgresql markdown")
+@Api(tags = "postgresql markdown")
 @RestController
 public class PostgresMarkdownController {
 
